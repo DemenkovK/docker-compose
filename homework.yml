@@ -7,7 +7,7 @@ services:
    tomcat:
       build: tomcat
       links:
-        - build
+        - builder
       volumes_from:
         - builder
       ports:
