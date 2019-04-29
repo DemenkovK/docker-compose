@@ -1,0 +1,11 @@
+FROM ubuntu:16.04
+MAINTAINER Konstantin Demenkov <demenkovk@gmail.com
+RUN apt-get update
+RUN mkdir -p /var/lib/tomcat8/webapps
+RUN apt-get install -y tomcat8
+ADD https://github.com/frekele/oracle-java/releases/download/8u212-b10/jdk-8u212-linux-x64.tar.gz /usr/lib/jvm/
+RUN cd /usr/lib/jvm/ && tar -xvzf /usr/lib/jvm/jdk-8u212-linux-x64.tar.gz
+ENV JRE_HOME /usr/lib/jvm/jdk1.8.0_212/jre
+ENV JAVA_HOME /usr/lib/jvm/jdk1.8.0_212
+EXPOSE 8080
+ENTRYPOINT ["/etc/init.d/tomcat8", "start"]

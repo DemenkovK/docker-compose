@@ -1,0 +1,15 @@
+version: '2'
+services:
+   builder:
+      build: build
+      links:
+        - tomcat
+      volumes:
+        - ./vol:/var/lib/tomcat8/webapps
+   tomcat:
+      build: tomcat
+      links:
+        - build
+      volumes_from:
+        - builder
+
