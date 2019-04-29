@@ -8,4 +8,4 @@ RUN cd /usr/lib/jvm/ && tar -xvzf /usr/lib/jvm/jdk-8u212-linux-x64.tar.gz
 ENV JRE_HOME /usr/lib/jvm/jdk1.8.0_212/jre
 ENV JAVA_HOME /usr/lib/jvm/jdk1.8.0_212
 EXPOSE 8080
-ENTRYPOINT ["/etc/init.d/tomcat8", "start"]
+CMD ["/bin/bash"]
