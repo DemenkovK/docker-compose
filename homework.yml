@@ -2,8 +2,6 @@ version: '2'
 services:
    builder:
       build: build
-      links:
-        - tomcat
       volumes:
         - ./vol:/var/lib/tomcat8/webapps
    tomcat:
@@ -12,4 +10,5 @@ services:
         - build
       volumes_from:
         - builder
-
+      ports:
+        - "8080:8080"
