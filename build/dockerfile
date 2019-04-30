@@ -7,5 +7,5 @@ RUN cd /usr/lib/jvm/ && tar -xvzf /usr/lib/jvm/jdk-8u212-linux-x64.tar.gz
 ENV JRE_HOME /usr/lib/jvm/jdk1.8.0_212/jre
 ENV JAVA_HOME /usr/lib/jvm/jdk1.8.0_212
 RUN mkdir hello && cd hello && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git . && \
-mvn package && mkdir -p /var/lib/tomcat8/webapps && cp /hello/target/hello-1.0.war /var/lib/tomcat8/webapps/
 RUN rm -rf /usr/lib/jvm/jdk-8u212-linux-x64.tar.gz
+CMD mvn package && mkdir -p /var/lib/tomcat8/webapps && cp /hello/target/hello-1.0.war /var/lib/tomcat8/webapps/
