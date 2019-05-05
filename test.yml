@@ -1,0 +1,50 @@
+---
+org: Dream
+         org_unit: First
+            Wokers:
+            - Olya:
+               Count: 4
+               Position: Accountant
+            - Dmitry:
+               Count: 3
+            - Ivan:
+               Count: 2
+            Salary_1st: Highest
+         org_unit: Second
+            Workers:
+            - Roman:
+               Count: 4
+               Position: Lawer
+            - Max:
+               Count: 2
+               Position: Driver
+            Age_2nd: 30-
+            Salary_2st: Standart (lower, then 1st and 5th)
+         org_unit: Third
+            Workers:
+            - Olya:
+               Count: 1
+               Position: Lawer
+            - Ivan:
+               Count: 1
+               Position: Builder
+            - Nick:
+               Count: 1
+               Position: Builder
+            Salary_3st: Standart (lower, then 1st and 5th)
+         org_unit: Fourth and Fifth
+            Workers:
+            - Julia:
+               Count: 5
+               Position: Clerk
+               Age: 30+
+            Salary_4th: Standart (lower, then 1st and 5th)
+            Salary_5th: Second, after 1th
+            Age_5th: Pension
+         org_unit: Sixth
+            Workers:
+            - Igor' Victorovich:
+               Position: Sequrity Director
+               Age: 50+
+            Salary_6th: Standart (lower, then 1st and 5th)
+...
